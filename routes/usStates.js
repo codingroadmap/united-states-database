@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const queries = require('../queries/us_states');
+const queries = require('../queries/usStates');
 
 router.get('/', (request, response, next) => {
   queries.list('us_states').then(us_states => {
