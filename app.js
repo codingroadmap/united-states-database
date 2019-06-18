@@ -4,11 +4,13 @@ const cors = require('cors');
 const app = express();
 
 const states = require('./routes/states');
+const usStates = require('./routes/usStates');
 
 app.use(bodyParser.json());
 app.use(cors());
 
 app.use('/states', states);
+app.use('/us_states', usStates);
 
 app.use((req, res, next) => {
   const err = new Error('Not Found');
